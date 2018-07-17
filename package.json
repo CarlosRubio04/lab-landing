@@ -28,7 +28,7 @@
     "ng2-nouislider": "1.6.1",
     "nouislider": "9.2.0",
     "popper.js": "1.12.3",
-    "rxjs": "5.4.1",
+    "rxjs": "^5.4.1",
     "zone.js": "0.8.4"
   },
   "devDependencies": {
