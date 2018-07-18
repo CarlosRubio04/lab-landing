@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './home.component';
 
@@ -16,7 +17,8 @@ import { ComponentsModule } from '../components/components.module';
         FormsModule,
         RouterModule,
         ComponentsModule,
-        NgbModule
+        NgbModule,
+        BrowserAnimationsModule
     ],
     declarations: [ HomeComponent ],
     exports:[ HomeComponent ],

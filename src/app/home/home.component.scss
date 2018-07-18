@@ -115,7 +115,7 @@
 	h2 {
 		color: $dxc-blue;
 		font-weight: 800;
-		margin-bottom: 20px;
+		margin-bottom: 60px;
 	}
 
 	&Cards {
@@ -161,11 +161,10 @@
 
 		.item:hover .cardActive {
 			z-index: 1;
-			transform: scaleX(1);
-			transform: scaleY(1.0);
+			opacity: 1;
+			transform: scale(1);
+			transform: translateY(20px);
 		}
-
-
 		.cardActive {
 			border-radius: 12px;
 			box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
@@ -175,11 +174,13 @@
 			position: absolute;
 			top: 0;
 			z-index: 0;
+			opacity: 0;
 			border: 0 none;
-			transform: scaleX(0.9);
-			transform: scaleY(0.9);
-			transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
-			
+			transform: scaleY(0.5);
+			transform: rotateY(50deg);
+			transform-origin: right top;
+			transition: transform 500ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease-in-out, opacity 200ms ease-in-out;
+
 			.content {
 				h4 {
 					color: $white-color;
