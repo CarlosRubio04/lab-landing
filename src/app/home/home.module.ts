@@ -15,7 +15,8 @@ import { ComponentsModule } from '../components/components.module';
         BrowserModule,
         FormsModule,
         RouterModule,
-        ComponentsModule
+        ComponentsModule,
+        NgbModule
     ],
     declarations: [ HomeComponent ],
     exports:[ HomeComponent ],

@@ -1,4 +1,197 @@
+@import '../../assets/sass/app-kit/_variables.scss';
+
 .Hero {
-	min-height: 500px;
+	min-height: 600px;
 	background-image: url(../../assets/img/hero-back.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&Container {
+		top: 120px;
+		position: relative;
+		width: 850px;
+		max-width: 100%;
+		.first, .second, .third {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				position: absolute;
+				max-width: 100%;
+			}
+			p {
+				color: $white-color;
+				text-align: center;
+				text-transform: uppercase;
+				z-index: 1;
+				margin: 0;
+				line-height: 1;
+			}
+		}
+		.first {
+			z-index: 1;
+			p {
+				font-size: 50px;
+				font-weight: 400;
+			}
+		}
+		.second {
+			top: 4px;
+			p {
+				font-size: 55px;
+				font-weight: 700;
+			}
+		}
+		.third {
+			top: 22px;
+			p {
+				font-size: 30px;
+			}
+		}
+	}
 }
+
+
+/*About Section*/
+.About{
+	position: relative;
+	margin-top: 40px;
+	&Container {
+		min-height: 630px;
+		position: relative;
+		background-image: url(../../assets/img/team.jpg);
+		background-repeat: no-repeat;
+		background-position: left center;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+	.hash {
+		margin-top: 30px;
+	}
+	&Slider {
+		width: 660px;
+		max-width: 100%;
+
+		&Contaier {
+			background-color: $dxc-orange;
+
+			h4 {
+				text-align: center;
+				color: $dxc-blue;
+				font-weight: 700;
+				font-size: 34px;
+				padding-top: 16px;
+			}
+
+			.carousel-content {
+				padding: 2em;
+				height: 300px;
+				display: flex;
+				align-items: center;
+				p {
+					color: $white-color;
+					font-weight: 500;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+
+/*Cards Section*/
+
+.routes {
+	background-color: $gray-input-bg;
+	margin-top: 40px;
+	padding: 60px 0;
+
+	h2 {
+		color: $dxc-blue;
+		font-weight: 800;
+		margin-bottom: 20px;
+	}
+
+	&Cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
+		grid-gap: 12px;
+		
+		.item {
+			position: relative;
+		}
+		.card {
+
+			&Container {
+				padding: 28px 18px;
+
+				.picture {
+					margin-bottom: 8px;
+					img {
+						height: 80px;
+					}
+				}
+				.content {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: flex-start;
+					min-height: 250px;
+					
+					h4 {
+						color: $dxc-blue;
+						font-size: 14px;
+						font-weight: 400;
+					}
+					p {
+						color: #9B9B9B;
+						font-size: 12px;
+					}
+				}
+			}
+
+		}
+
+		.item:hover .cardActive {
+			z-index: 1;
+			transform: scaleX(1);
+			transform: scaleY(1.0);
+		}
+
+
+		.cardActive {
+			border-radius: 12px;
+			box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+			background-color: $dxc-red;
+			color: $white-color;
+			margin-bottom: 20px;
+			position: absolute;
+			top: 0;
+			z-index: 0;
+			border: 0 none;
+			transform: scaleX(0.9);
+			transform: scaleY(0.9);
+			transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+			
+			.content {
+				h4 {
+					color: $white-color;
+					font-size: 20px;
+					font-weight: 600;
+				}
+				p {
+					color: $white-color;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+

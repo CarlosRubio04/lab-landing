@@ -1,6 +1,6 @@
 $font-color:                 #66615b !default;
 $fill-font-color:            rgba(255, 255, 255, 0.8);
-$font-family-sans-serif:     'Montserrat', "Helvetica", Arial, sans-serif;
+$font-family-sans-serif:     'Roboto', sans-serif;
 
 $none:                       0   !default;
 $border-thin:                1px !default;
@@ -28,7 +28,7 @@ $dark-gray:                  #9A9A9A !default;
 
 $placeholder-gray:           rgba(210, 210, 210, 1)  !default;
 
-$gray-input-bg:              #fffcf5 !default;
+$gray-input-bg:              #F9F9F9 !default;
 $danger-input-bg:            #FFC0A4 !default;
 $success-input-bg:           #ABF3CB !default;
 $other-medium-gray:          #A49E93 !default;
@@ -317,3 +317,10 @@ $zindex-select-dropdown: 1060 !default; // must be higher than a modal backgroun
 
 //** Placeholder text color
 $input-color-placeholder: #999 !default;
+
+
+// Mine 
+
+$dxc-orange: #FBB03F;
+$dxc-blue: #005A9E;
+$dxc-red: #EF462F;
