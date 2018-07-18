@@ -1,5 +1,6 @@
 .footer{
     background-attachment: fixed;
+    background-position: right top;
     position: relative;
     line-height: 20px;
 }
@@ -44,7 +45,7 @@
     color: #EB5E28;
 }
 .footer{
-    background-color: $white-color;
+    background-color: $dxc-orange;
     line-height: $line-height;
 
     &.footer-black{

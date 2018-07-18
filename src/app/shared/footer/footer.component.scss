@@ -1,0 +1,11 @@
+@import '../../../assets/sass/app-kit/_variables.scss';
+
+.footer {
+	background-image: url(../../../assets/img/map-footer.png);
+	padding: 130px 0;
+
+	h4, p, a{
+		margin-top: 0;
+		color: $white-color;
+	}
+}
