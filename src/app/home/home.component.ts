@@ -6,7 +6,9 @@ import {
     state,
     style,
     animate,
-    transition
+    transition,
+    query,
+    stagger
 } from '@angular/animations';
 
 
@@ -15,15 +17,17 @@ import {
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     animations: [
-    trigger('hoverState', [
+    trigger('OneLine', [
         state('show', style({
+            display: 'block',
             opacity: 1,
         })),
         state('hide',   style({
-            opacity: 0
+            display: 'none',
+            opacity: 0,
         })),
-        transition('show => hide', animate('600ms ease-out')),
-        transition('hide => show', animate('1000ms ease-in'))
+        transition('show => hide', animate('300ms ease-out')),
+        transition('hide => show', animate('100ms ease-in'))
         ])
     ]
 })
@@ -35,25 +39,38 @@ export class HomeComponent implements OnInit {
         right: false
     };
 
-    show = false;
+    showOne = false;
+    showTow = false;
+    visbleOne = false;
+    visbleTow = false;
+
+    item = 7;
 
     constructor() { }
 
-    get stateName() {
-        return this.show ? 'show' : 'hide'
+
+    get showFirst(){
+        return this.showOne ? 'show' : 'hide'
+    }
+    get showSecond(){
+        return this.showTow ? 'show' : 'hide'
+    }
+    toggleOne() {
+        this.showTow = false;
+        this.visbleTow = false;
+
+        this.showOne = true;
+        this.visbleOne = true;
     }
 
+    toggleSecond() {
+        this.showOne = false;
+        this.visbleOne = false;
 
-    mouseenter(e) {
-        console.log(e.type);
-        console.log(e.toElement.nextElementSibling)
-        this.show = true;
+        this.showTow = true;
+        this.visbleTow = true;
         
-    }
-    mouseleave(e) {
-        console.log(e.type);
-        console.log(e);
-        this.show = false;
+        
     }
 
     ngOnInit() {}
