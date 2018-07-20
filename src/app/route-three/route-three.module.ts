@@ -6,11 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { HomeComponent } from './home.component';
-import { routeOne } from '../route-one/route-one.component';
-import { routeTow } from '../route-tow/route-tow.component';
-import { routeThree } from '../route-three/route-three.component';
-import { routeFour } from '../route-four/route-four.component';
+import { routeThree } from './route-three.component';
 
 import { ComponentsModule } from '../components/components.module';
 
@@ -24,8 +20,8 @@ import { ComponentsModule } from '../components/components.module';
         NgbModule,
         BrowserAnimationsModule
     ],
-    declarations: [ HomeComponent, routeOne, routeTow, routeThree, routeFour ],
-    exports:[ HomeComponent ],
+    declarations: [ routeThree ],
+    exports:[ routeThree ],
     providers: []
 })
 export class HomeModule { }

@@ -41,10 +41,13 @@ export class HomeComponent implements OnInit {
 
     showOne = false;
     showTow = false;
+    showThree = false;
+    showFour = false;
+
     visbleOne = false;
     visbleTow = false;
-
-    item = 7;
+    visbleThree = false;
+    visbleFour = false;
 
     constructor() { }
 
@@ -55,9 +58,19 @@ export class HomeComponent implements OnInit {
     get showSecond(){
         return this.showTow ? 'show' : 'hide'
     }
+    get showThird(){
+        return this.showThree ? 'show' : 'hide'
+    }
+    get showFourth(){
+        return this.showFour ? 'show' : 'hide'
+    }
     toggleOne() {
         this.showTow = false;
         this.visbleTow = false;
+        this.showThree = false;
+        this.visbleThree = false;
+        this.showFour = false;
+        this.visbleFour = false;
 
         this.showOne = true;
         this.visbleOne = true;
@@ -66,10 +79,38 @@ export class HomeComponent implements OnInit {
     toggleSecond() {
         this.showOne = false;
         this.visbleOne = false;
+        this.showThree = false;
+        this.visbleThree = false;
+        this.showFour = false;
+        this.visbleFour = false;
 
         this.showTow = true;
         this.visbleTow = true;
         
+    }
+
+    toggleThird() {
+        this.showOne = false;
+        this.showTow = false;
+        this.visbleOne = false;
+        this.visbleTow = false;
+        this.showFour = false;
+        this.visbleFour = false;
+
+        this.showThree = true;
+        this.visbleThree = true;
+        
+    }
+    toggleFourth() {
+        this.showOne = false;
+        this.showTow = false;
+        this.visbleOne = false;
+        this.visbleTow = false;
+        this.showThree = false;
+        this.visbleThree = false;
+
+        this.showFour = true;
+        this.visbleFour = true;
         
     }
 
