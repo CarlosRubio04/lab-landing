@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { CalendarModule } from 'angular-calendar';
 
 import { HttpModule} from "@angular/http";
 
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { DemoComponent } from './calendar/component';
 
 import { HomeModule } from './home/home.module';
 
@@ -18,7 +20,8 @@ import { HomeModule } from './home/home.module';
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { HomeModule } from './home/home.module';
     RouterModule,
     AppRoutingModule,
     HomeModule,
-    HttpModule
+    HttpModule,
+    CalendarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ import { routeTow } from '../route-tow/route-tow.component';
 import { routeThree } from '../route-three/route-three.component';
 import { routeFour } from '../route-four/route-four.component';
 
+
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ComponentsModule } from '../components/components.module';
         RouterModule,
         ComponentsModule,
         NgbModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
     ],
     declarations: [ HomeComponent, routeOne, routeTow, routeThree, routeFour ],
     exports:[ HomeComponent ],
