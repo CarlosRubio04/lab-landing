@@ -95,6 +95,24 @@
 					</div>
 				</div>
 			</form>
+			<ngb-alert type="danger"  [dismissible]="false" *ngIf="showError">
+				<div class="container">
+					<ng-container>
+						<i class="nc-icon nc-bell-55"></i>
+					</ng-container>
+
+					Hubo un error al enviar la Información
+				</div>
+			</ngb-alert>
+
+			<ngb-alert type="success"  [dismissible]="false" *ngIf="showSucces">
+				<div class="container">
+					<ng-container>
+						<i class="nc-icon nc-bell-55"></i>
+					</ng-container>
+					La información se ha enviado correctamente
+				</div>
+			</ngb-alert>
 		</div>
 	</div>
 </section>

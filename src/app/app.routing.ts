@@ -13,6 +13,7 @@ import { routeFour } from './route-four/route-four.component';
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'contacto',             component: ContactoComponent },
+    { path: 'gracias',             component: HomeComponent },
     { path: 'ruta-uno',             component: routeOne },
     { path: 'ruta-dos',             component: routeTow },
     { path: 'ruta-tres',             component: routeThree },

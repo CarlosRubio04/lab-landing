@@ -48,7 +48,7 @@
 		.item {
 			padding: 2em 4em;
 			grid-area: form;
-
+			animation: fadeInRight 1s ease-in-out;
 			@include for-phone-only {
 				padding: 1em 1em;
 			}

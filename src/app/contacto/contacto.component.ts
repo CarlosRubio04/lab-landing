@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, Input, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -22,6 +22,7 @@ import {
 })
 
 export class ContactoComponent implements OnInit {
+
     model = {
         left: true,
         middle: false,
@@ -44,9 +45,11 @@ export class ContactoComponent implements OnInit {
 
     campaignId:number = 19;
     partnerId:number = 1;
-    tipo:string = "TEST";
+    tipo:string = "Direct";
 
     showInputs:boolean = false;
+    showError:boolean = false;
+    showSucces:boolean = false;
 
 
 
@@ -56,16 +59,19 @@ export class ContactoComponent implements OnInit {
         private router:Router, 
         private route: ActivatedRoute){
 
+        
+
+
         if(this.route.snapshot.queryParams['partnerId'] == null){
             this.partnerId = 1;
         }else {
-           this.partnerId = this.route.snapshot.queryParams['partnerId'];
+            this.partnerId = this.route.snapshot.queryParams['partnerId'];
         }
 
         if(this.route.snapshot.queryParams['type'] == null){
             this.partnerId = 1;
         }else {
-           this.tipo = this.route.snapshot.queryParams['type'];
+            this.tipo = this.route.snapshot.queryParams['type'];
         }
 
         this.rForm = fb.group({
@@ -114,20 +120,21 @@ export class ContactoComponent implements OnInit {
         this.rutaDos = lead.rutaDos;
         this.institucion = lead.institucion;
 
-
-        console.log(lead);
         this.http.get(`http://dxc.charlsdesigner.com/back/?campaignId=${this.campaignId}&partnerId=${this.partnerId}&type=${this.tipo}&nombre=${this.nombre}&documento=${this.documento}&telefono=${this.telefono}&email=${this.email}&ruta=${this.ruta}&institucion=${this.institucion}&num-ruta-uno=${this.rutaUno}&num-ruta-dos=${this.rutaDos}&num-ruta-tres=${this.rutaTres}`)
         .subscribe((res: Response)=> {
             const backOffice = res;
             console.log(backOffice);
             if (backOffice.ok) {
-                this.router.navigate(['/gracias']);
+                this.showSucces = true;
+                setTimeout(() => this.router.navigate(['/gracias']), 500);
             }else {
-                console.log(backOffice);
+                this.showError = true;
             }
         })
 
     }
     
-    ngOnInit() {}
+    ngOnInit() {
+        
+    }
 }

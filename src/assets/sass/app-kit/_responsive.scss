@@ -838,7 +838,7 @@
                 }
                 p {
                     @include for-phone-only {
-                        color: $white-color !important !important;
+                        color: $white-color !important;
                     }
                 }
                 svg {

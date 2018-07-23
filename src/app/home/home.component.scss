@@ -66,9 +66,13 @@
 		}
 		.first {
 			z-index: 1;
+			img {
+				animation: fadeInUp .4s ease-in;
+			}
 			p {
 				font-size: 50px;
 				font-weight: 400;
+				animation: fadeInDown .6s ease-in;
 				@include for-phone-only{
 					font-size: 30px;
 				}
@@ -76,7 +80,11 @@
 		}
 		.second {
 			top: 4px;
+			img {
+				animation: fadeInUp .8s ease-in;
+			}
 			p {
+				animation: fadeInDown 1s ease-in;
 				font-size: 55px;
 				font-weight: 700;
 				@include for-phone-only{
@@ -86,10 +94,14 @@
 		}
 		.third {
 			top: 22px;
+			img {
+				animation: fadeInUp 1.2s ease-in;
+			}
 			@include for-phone-only {
 				top: 4px;
 			}
 			p {
+				animation: fadeInDown 1.4s ease-in;
 				font-size: 30px;
 				@include for-phone-only{
 					font-size: 13px;
