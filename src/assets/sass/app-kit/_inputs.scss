@@ -59,12 +59,13 @@
     & + .form-control-feedback{
         border-radius: $border-radius-large;
         font-size: $font-size-base;
-        color: $danger-color;
-        font-size: .8rem;
+        color: $dxc-orange;
+        font-size: 10px;
         position: absolute;
         top: 100%;
         padding-left: $padding-label-horizontal;
         vertical-align: middle;
+        animation: fadeInUp .3s ease-in-out;
     }
 
     .open &{
