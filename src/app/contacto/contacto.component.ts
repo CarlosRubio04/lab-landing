@@ -35,12 +35,18 @@ export class ContactoComponent implements OnInit {
     telefono:number;
     email:string;
     ruta:number;
+    rutaUno:number = 0;
+    rutaDos:number = 0;
+    rutaTres:number = 0;
+    rutaCuatro:number = 0;
     institucion:string;
     titleAlert:string = 'Este campo es obligatorio';
 
     campaignId:number = 19;
     partnerId:number = 1;
     tipo:string = "TEST";
+
+    showInputs:boolean = false;
 
 
 
@@ -50,8 +56,17 @@ export class ContactoComponent implements OnInit {
         private router:Router, 
         private route: ActivatedRoute){
 
-        this.partnerId = this.route.snapshot.queryParams['partnerId'];
-        this.tipo = this.route.snapshot.queryParams['type'];
+        if(this.route.snapshot.queryParams['partnerId'] == null){
+            this.partnerId = 1;
+        }else {
+           this.partnerId = this.route.snapshot.queryParams['partnerId'];
+        }
+
+        if(this.route.snapshot.queryParams['type'] == null){
+            this.partnerId = 1;
+        }else {
+           this.tipo = this.route.snapshot.queryParams['type'];
+        }
 
         this.rForm = fb.group({
             'nombre': [null, Validators.compose([
@@ -73,21 +88,40 @@ export class ContactoComponent implements OnInit {
                 Validators.required,
                 Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
                 ])],
-            'ruta': [null],
+            'ruta': [0],
+            'rutaUno': [null],
+            'rutaDos': [null],
+            'rutaTres': [null],
             'institucion': [null]
         });
+    }
+
+    onChange(deviceValue) {
+        if(deviceValue == 4){
+            this.showInputs = true;
+        }else {
+            this.showInputs = false;
+        }
     }
     
     public sendData(lead){
         this.nombre = lead.nombre;
+        this.documento = lead.documento;
+        this.telefono = lead.telefono;
+        this.email = lead.email;
+        this.ruta = lead.ruta;
+        this.rutaUno = lead.rutaUno;
+        this.rutaDos = lead.rutaDos;
+        this.institucion = lead.institucion;
 
-        console.log(this.nombre);
-        this.http.get(`http://dxc.charlsdesigner.com/back/?campaignId=${this.campaignId}&partnerId=${this.partnerId}&type=${this.tipo}&nombre=${this.nombre}&documento=${this.documento}&telefono=${this.telefono}&email=${this.email}&ruta=${this.ruta}&institucion=${this.institucion}`)
+
+        console.log(lead);
+        this.http.get(`http://dxc.charlsdesigner.com/back/?campaignId=${this.campaignId}&partnerId=${this.partnerId}&type=${this.tipo}&nombre=${this.nombre}&documento=${this.documento}&telefono=${this.telefono}&email=${this.email}&ruta=${this.ruta}&institucion=${this.institucion}&num-ruta-uno=${this.rutaUno}&num-ruta-dos=${this.rutaDos}&num-ruta-tres=${this.rutaTres}`)
         .subscribe((res: Response)=> {
             const backOffice = res;
             console.log(backOffice);
             if (backOffice.ok) {
-                //this.router.navigate(['/gracias']);
+                this.router.navigate(['/gracias']);
             }else {
                 console.log(backOffice);
             }

@@ -47,8 +47,8 @@
 					</div>
 
 					<div class="form-group">
-						<select name="ruta" id="ruta" formControlName="ruta" class="form-control">
-							<option>Ruta</option>
+						<select name="ruta" id="ruta" formControlName="ruta" class="form-control" (change)="onChange($event.target.value)">
+							<option value="0" disabled>Ruta</option>
 							<option value="1">Diseñador de experiencias</option>
 							<option value="2">Diseñador de entorno</option>
 							<option value="3">Gamificador</option>
@@ -58,6 +58,29 @@
 							{{ titleAlert }}
 						</div>
 					</div>
+
+
+					<div class="form-group" *ngIf=(showInputs)>
+						<input id="rutaUno" formControlName="rutaUno" type="number" class="form-control" placeholder="# personas a capacitar en ruta Diseñador de experiencias">
+						<div class="form-control-feedback" *ngIf="!rForm.controls['rutaUno'].valid && rForm.controls['rutaUno'].touched">
+							{{ titleAlert }}
+						</div>
+					</div>
+
+					<div class="form-group" *ngIf=(showInputs)>
+						<input id="rutaDos" formControlName="rutaDos" type="number" class="form-control" placeholder="# personas a capacitar en ruta Diseñador de entorno">
+						<div class="form-control-feedback" *ngIf="!rForm.controls['rutaDos'].valid && rForm.controls['rutaDos'].touched">
+							{{ titleAlert }}
+						</div>
+					</div>
+
+					<div class="form-group" *ngIf=(showInputs)>
+						<input id="rutaTres" formControlName="rutaTres" type="number" class="form-control" placeholder="# personas a capacitar en ruta Gamificador">
+						<div class="form-control-feedback" *ngIf="!rForm.controls['rutaTres'].valid && rForm.controls['rutaTres'].touched">
+							{{ titleAlert }}
+						</div>
+					</div>
+
 
 					<div class="form-group">
 						<input id="institucion" formControlName="institucion" type="text" class="form-control" placeholder="Institución Educativa">
