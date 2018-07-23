@@ -1,10 +1,27 @@
 @import '../../assets/sass/app-kit/_variables.scss';
 
+@mixin for-phone-only {
+	@media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+	@media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+	@media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+	@media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+	@media (min-width: 1800px) { @content; }
+}
+
 
 .route {
+
 	padding: 2em 0;
 	position: relative;
-
+	
 	&-container {
 		position: relative;
 		animation: fadeInDown 2s ease-in-out forwards;
@@ -20,6 +37,7 @@
 		grid-template-areas: "ruta ruta"
 		". duracion"
 		"nombre nombre";
+
 	}
 	.u-route {
 		grid-area: ruta;
@@ -40,10 +58,12 @@
 		ul {
 			width: 100%;
 			margin-bottom: 0;
+			padding-left: 0;
 			display: flex;
 			justify-content: flex-end;
 			align-items: baseline;
 			list-style: none;
+
 
 			li {
 				background-color: $dxc-orange;
@@ -63,12 +83,14 @@
 		position: relative;
 		top: -25px;
 		animation: fadeInUp 1s ease-in-out forwards;
+
 		h1 {
 			color: $dxc-blue;
 			margin-top: 0;
 			font-size: 34px;
 			font-weight: 800;
 			text-transform: uppercase;
+
 		}
 	}
 
@@ -79,10 +101,13 @@
 		grid-template-columns: repeat(7, 1fr);
 		grid-template-rows: 1fr;
 
+
+
 		.item {
 			display: grid;
 			grid-auto-columns: 1fr;
 			grid-template-rows: 110px 54px 110px;
+
 
 			&:first-child {
 				.item-week {
@@ -95,6 +120,7 @@
 						border-right: 27px solid transparent;
 						border-bottom: 27px solid transparent;
 						border-left: 27px solid $gray-input-bg;
+
 					}
 				}
 			}
@@ -110,6 +136,7 @@
 						border-right: 27px solid transparent;
 						border-bottom: 27px solid transparent;
 						border-left: 27px solid #788EC7;
+
 					}
 				}
 				.item-descp {
@@ -127,16 +154,21 @@
 				grid-template-areas: "desc"
 				"week"
 				".";
+
 			}
 			&:nth-child(even) {
 				grid-template-areas: "."
 				"week"
 				"desc";
 
+
+
 				.item-descp {
 					top: -24px;
+	
 					svg {
 						transform: rotate(180deg);
+	
 
 					}
 				}
@@ -160,10 +192,18 @@
 			}
 			&:nth-of-type(3){
 				.item-week{
+					background-color: $dxc-orange-dark;
 					animation: fadeInLeft .8s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp 1.2s ease-in-out forwards;
+					p {
+						color: $dxc-orange-dark;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange-dark;}
+						.cls-12{stroke:$dxc-orange-dark;}
+					}
 				}
 			}
 			&:nth-of-type(4){
@@ -208,9 +248,11 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: flex-end;
+
 				p {
 					text-align: center;
 					color: $dxc-orange;
+
 				}
 				svg {
 					height: 70px;
@@ -232,6 +274,8 @@
 					.cls-14{clip-path:url(#clip-path-12);}
 					.cls-15{clip-path:url(#clip-path-13);}
 
+
+
 				}
 			}
 
@@ -245,6 +289,7 @@
 				-webkit-box-shadow: inset 2px 0px 2px 0px rgba(0,0,0,0.12);
 				-moz-box-shadow: inset 2px 0px 2px 0px rgba(0,0,0,0.12);
 				box-shadow: inset 2px 0px 2px 0px rgba(0,0,0,0.12);
+
 
 				p {
 					color: $white-color;
@@ -265,6 +310,8 @@
 		-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
 		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.10);
 		animation: fadeInUp 2s ease-in-out forwards;
+
+
 
 		&:before {
 			content: "";
@@ -294,6 +341,7 @@
 				font-weight: 700;
 				margin-top: 0;
 				text-align: center;
+
 			}
 		}
 		p {

@@ -101,7 +101,7 @@
 
 			&:last-child {
 				.item-week {
-					background-color: #788EC7;
+					background-color: $dxc-orange-dark;
 					&:after {
 						content: "";
 						position: absolute;
@@ -109,16 +109,16 @@
 						border-top: 27px solid transparent;
 						border-right: 27px solid transparent;
 						border-bottom: 27px solid transparent;
-						border-left: 27px solid #788EC7;
+						border-left: 27px solid $dxc-orange-dark;
 					}
 				}
 				.item-descp {
 					p {
-						color:#788EC7;
+						color:$dxc-orange-dark;
 					}
 					svg {
-						.cls-5{fill:#788EC7;}
-						.cls-12{stroke:#788EC7;}
+						.cls-5{fill:$dxc-orange-dark;}
+						.cls-12{stroke:$dxc-orange-dark;}
 					}
 				}
 			}
@@ -144,10 +144,18 @@
 
 			&:nth-of-type(1){
 				.item-week{
+					background-color: $dxc-orange;
 					animation: fadeInLeft .2s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp .4s ease-in-out forwards;
+					p {
+						color: $dxc-orange;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange;}
+						.cls-12{stroke:$dxc-orange;}
+					}
 				}
 			}
 			&:nth-of-type(2){
@@ -184,10 +192,18 @@
 			}
 			&:nth-of-type(6){
 				.item-week{
+					background-color: $dxc-orange;
 					animation: fadeInLeft 2.2s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp 2.6s ease-in-out forwards;
+					p {
+						color: $dxc-orange;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange;}
+						.cls-12{stroke:$dxc-orange;}
+					}
 				}
 			}
 			&:nth-of-type(7){
@@ -210,7 +226,7 @@
 				justify-content: flex-end;
 				p {
 					text-align: center;
-					color: $dxc-orange;
+					color: $dxc-purple;
 				}
 				svg {
 					height: 70px;
@@ -220,14 +236,14 @@
 					.cls-1{clip-rule:evenodd;}
 					.cls-3{clip-path:url(#clip-three);}
 					.cls-4{clip-path:url(#clip-three-2);}
-					.cls-5{fill:$dxc-orange;}
+					.cls-5{fill:$dxc-purple;}
 					.cls-6{clip-path:url(#clip-three-3);}
 					.cls-7{isolation:isolate;}
 					.cls-8{clip-path:url(#clip-three-5);}
 					.cls-9{clip-path:url(#clip-three-6);}
 					.cls-10{fill:#fff;}
 					.cls-11{clip-path:url(#clip-three-8);}
-					.cls-12{stroke:$dxc-orange;stroke-miterlimit:10;stroke-width:2px;}
+					.cls-12{stroke:$dxc-purple;stroke-miterlimit:10;stroke-width:2px;}
 					.cls-13{clip-path:url(#clip-three-10);}
 					.cls-14{clip-path:url(#clip-three-12);}
 					.cls-15{clip-path:url(#clip-three-13);}
@@ -238,7 +254,7 @@
 			&-week {
 				grid-area: week;
 				position: relative;
-				background-color: $dxc-orange;
+				background-color: $dxc-purple;
 				display: flex;
 				align-items: center;
 				justify-content: center;

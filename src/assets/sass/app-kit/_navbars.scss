@@ -394,7 +394,7 @@
     cursor: pointer;
 
     .navbar & .navbar-toggler-bar{
-        background: $font-color;
+        background-color: $white-color;
     }
 
     .navbar[class*="bg-"] & .navbar-toggler-bar,

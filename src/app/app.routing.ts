@@ -5,10 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { routeOne } from './route-one/route-one.component';
+import { routeTow } from './route-tow/route-tow.component';
+import { routeThree } from './route-three/route-three.component';
+import { routeFour } from './route-four/route-four.component';
 
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'contacto',             component: ContactoComponent },
+    { path: 'ruta-uno',             component: routeOne },
+    { path: 'ruta-dos',             component: routeTow },
+    { path: 'ruta-tres',             component: routeThree },
+    { path: 'ruta-cuatro',             component: routeFour },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

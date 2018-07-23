@@ -370,7 +370,7 @@
         overflow-y: visible;
         border-top: none;
         text-align: left;
-        border-left: 1px solid #CCC5B9;
+        border-left: 0;
         padding-right: 0px;
         padding-left: 40px;
         padding-top: 15px;
@@ -386,7 +386,7 @@
         .navbar-nav > .nav-item{
             // border-bottom: 1px solid;
             &:last-child {
-            border-bottom: 0;
+                border-bottom: 0;
             }
             & > .nav-link{
                 margin: 0px 0px;
@@ -408,7 +408,7 @@
             height: 100%;
             width: 100%;
             position: absolute;
-            background-color: $bg-nude;
+            background-color: $dxc-blue;
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(112, 112, 112, 0) 60%, rgba(186, 186, 186, 0.15) 100%);
             display: block;
             content: "";
@@ -688,3 +688,200 @@
         }
     }
 }
+
+
+
+
+/// Mine 
+
+
+@import '../../assets/sass/app-kit/_variables.scss';
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+
+.route {
+    
+    @include for-phone-only {
+        background-color: $dxc-red !important;
+        width: 100% !important;
+        padding: 240px 1em !important; 
+    }
+    
+    .back {
+        margin-top: 1em;
+        display: none;
+
+        @include for-phone-only {
+            display: block;
+        }
+    }
+
+    &-title {
+        @include for-phone-only {
+            grid-template-columns: 1fr !important;
+            grid-template-rows: repeat(3, auto) !important;
+            grid-template-areas: "ruta"
+            "nombre"
+            "duracion" !important;
+        }
+    }
+    
+    .u-route {
+
+        h4 {
+            @include for-phone-only {
+                color: $white-color !important;
+            }
+        }
+    }
+    &-duration {
+        
+        ul {
+            padding-left: 0 !important;
+            @include for-phone-only {
+                justify-content: center !important;
+            }
+        }
+    }
+    &-name {
+        @include for-phone-only {
+            top: 0 !important;
+        }
+        h1 {
+            @include for-phone-only {
+                color: $white-color !important;
+            }
+        }
+    }
+
+    &-content {
+
+        @include for-phone-only {
+            grid-template-rows: repeat(7, 1fr) !important;
+            grid-template-columns: 1fr !important;
+        }
+
+        .item {
+
+            @include for-phone-only {
+                grid-template-rows: 1fr 1fr !important;
+            }
+
+            &:first-child {
+                .item-week {
+                    &:before {
+                        @include for-phone-only {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                .item-week {
+                    &:after {
+                        @include for-phone-only {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(odd) {
+                @include for-phone-only {
+                    grid-template-areas: "desc"
+                    "week" !important;
+                }
+            }
+            &:nth-child(even) {
+                @include for-phone-only {
+                    grid-template-areas: "desc"
+                    "week" !important;
+                }
+
+                .item-descp {
+                    @include for-phone-only {
+                        top: 0 !important;
+                        flex-direction: row !important;
+                        justify-content: flex-start !important;
+                    }
+                    svg {
+                        @include for-phone-only {
+                            transform: translate(-11px, 22px) rotate(0deg) !important;
+                        }
+
+                    }
+                }
+            }
+
+            &-descp {
+
+                @include for-phone-only {
+                    top: 0 !important;
+                    flex-direction: row-reverse !important;
+                    justify-content: flex-end !important;
+                }
+                p {
+                    @include for-phone-only {
+                        color: $white-color !important !important;
+                    }
+                }
+                svg {
+                    @include for-phone-only {
+                        transform: translate(-11px, 22px) !important;
+                        margin-right: 12px !important;
+                    }
+
+                }
+            }
+
+            &-week {
+
+                @include for-phone-only {
+                    max-height: 50px !important;
+                }
+
+            }
+        }
+    }
+
+
+    &-objective {
+        @include for-phone-only {
+            padding: 2em  1em 1em 1em !important;
+        }  
+
+        &-title {
+            h3 {
+                @include for-phone-only {
+                    font-size: 20px !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+        p {
+            @include for-phone-only {
+                font-size: 14px !important;
+                font-weight: 200 !important;
+            }
+        }
+    }
+}
+
+
+

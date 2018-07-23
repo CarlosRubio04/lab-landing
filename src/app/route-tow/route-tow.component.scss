@@ -101,7 +101,7 @@
 
 			&:last-child {
 				.item-week {
-					background-color: #788EC7;
+					background-color: $dxc-purple;
 					&:after {
 						content: "";
 						position: absolute;
@@ -109,16 +109,16 @@
 						border-top: 27px solid transparent;
 						border-right: 27px solid transparent;
 						border-bottom: 27px solid transparent;
-						border-left: 27px solid #788EC7;
+						border-left: 27px solid $dxc-purple;
 					}
 				}
 				.item-descp {
 					p {
-						color:#788EC7;
+						color:$dxc-purple;
 					}
 					svg {
-						.cls-5{fill:#788EC7;}
-						.cls-12{stroke:#788EC7;}
+						.cls-5{fill:$dxc-purple;}
+						.cls-12{stroke:$dxc-purple;}
 					}
 				}
 			}
@@ -152,10 +152,18 @@
 			}
 			&:nth-of-type(2){
 				.item-week{
+					background-color: $dxc-orange-dark;
 					animation: fadeInLeft .4s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp .8s ease-in-out forwards;
+					p {
+						color: $dxc-orange-dark;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange-dark;}
+						.cls-12{stroke:$dxc-orange-dark;}
+					}
 				}
 			}
 			&:nth-of-type(3){
@@ -168,26 +176,50 @@
 			}
 			&:nth-of-type(4){
 				.item-week{
+					background-color: $dxc-orange-dark;
 					animation: fadeInLeft 1.2s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp 1.8s ease-in-out forwards;
+					p {
+						color: $dxc-orange-dark;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange-dark;}
+						.cls-12{stroke:$dxc-orange-dark;}
+					}
 				}
 			}
 			&:nth-of-type(5){
 				.item-week{
+					background-color: $dxc-purple;
 					animation: fadeInLeft 1.8s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp 2.2s ease-in-out forwards;
+					p {
+						color: $dxc-purple;
+					}
+					svg {
+						.cls-5{fill:$dxc-purple;}
+						.cls-12{stroke:$dxc-purple;}
+					}
 				}
 			}
 			&:nth-of-type(6){
 				.item-week{
+					background-color: $dxc-orange-dark;
 					animation: fadeInLeft 2.2s ease-in-out forwards;
 				}
 				.item-descp {
 					animation: fadeInUp 2.6s ease-in-out forwards;
+					p {
+						color: $dxc-orange-dark;
+					}
+					svg {
+						.cls-5{fill:$dxc-orange-dark;}
+						.cls-12{stroke:$dxc-orange-dark;}
+					}
 				}
 			}
 			&:nth-of-type(7){
