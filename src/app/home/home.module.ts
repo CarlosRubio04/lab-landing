@@ -14,15 +14,12 @@ import { routeFour } from '../route-four/route-four.component';
 // import { DemoComponent } from '../calendar/component';
 
 
-import { ComponentsModule } from '../components/components.module';
-
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
         FormsModule,
         RouterModule,
-        ComponentsModule,
         NgbModule,
         BrowserAnimationsModule
     ],

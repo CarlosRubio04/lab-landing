@@ -178,7 +178,7 @@
 .routes {
 	background-color: $gray-input-bg;
 	margin-top: 40px;
-	padding: 60px 0;
+	padding: 60px 0 100px 0;
 
 	h2 {
 		color: $dxc-blue;
@@ -300,3 +300,32 @@
 }
 
 
+.calendar {
+	background-color: $white-color;
+	h2 {
+		color: $dxc-blue;
+		font-weight: 800;
+		margin-bottom: 60px;
+	}
+	.carousel-content {
+		img {
+			max-width: 100% !important;
+			heigth: auto !important;
+		}
+	}
+}
+
+.cta {
+	position: relative;
+	background-color: transparent;
+	width: 100%;
+	height: 100px;
+	.button {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 10px;
+		cursor: pointer;
+	}
+}
