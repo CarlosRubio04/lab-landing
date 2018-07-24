@@ -10,9 +10,12 @@ import { routeTow } from './route-tow/route-tow.component';
 import { routeThree } from './route-three/route-three.component';
 import { routeFour } from './route-four/route-four.component';
 
+import { CalendarComponent } from './calendar/calendar.component';
+
 const routes: Routes =[
     { path: 'home',             component: HomeComponent },
     { path: 'contacto',             component: ContactoComponent },
+    { path: 'calendar',             component: CalendarComponent },
     { path: 'gracias',             component: HomeComponent },
     { path: 'ruta-uno',             component: routeOne },
     { path: 'ruta-dos',             component: routeTow },
