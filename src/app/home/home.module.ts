@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
+import { DemoUtilsModule } from '../demo-utils/module';
 
 import { HomeComponent } from './home.component';
 import { routeOne } from '../route-one/route-one.component';
 import { routeTow } from '../route-tow/route-tow.component';
 import { routeThree } from '../route-three/route-three.component';
 import { routeFour } from '../route-four/route-four.component';
-// import { DemoComponent } from '../calendar/component';
+import { CalendarComponent } from '../calendar/calendar.component';
 
 
 @NgModule({
@@ -21,11 +23,13 @@ import { routeFour } from '../route-four/route-four.component';
         FormsModule,
         RouterModule,
         NgbModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        CalendarModule,
+        DemoUtilsModule
     ],
     declarations: [ 
         HomeComponent, 
-        // DemoComponent, 
+        CalendarComponent, 
         routeOne, 
         routeTow, 
         routeThree, 

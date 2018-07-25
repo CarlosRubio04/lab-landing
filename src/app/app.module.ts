@@ -6,7 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { CalendarModule } from 'angular-calendar';
-import { DemoUtilsModule } from './demo-utils/module';
+//import { DemoUtilsModule } from './demo-utils/module';
 
 import { HttpModule} from "@angular/http";
 
@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { CalendarComponent } from './calendar/calendar.component';
+//import { CalendarComponent } from './calendar/calendar.component';
 
 import { HomeModule } from './home/home.module';
 
@@ -25,7 +25,7 @@ import { HomeModule } from './home/home.module';
     NavbarComponent,
     FooterComponent,
     ContactoComponent,
-    CalendarComponent
+    //CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,7 @@ import { HomeModule } from './home/home.module';
     HttpModule,
     CommonModule,
     CalendarModule.forRoot(),
-    DemoUtilsModule
+    //DemoUtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
