@@ -1,21 +1,5 @@
 @import '../../../assets/sass/app-kit/_variables.scss';
-// Responsive
-
-@mixin for-phone-only {
-	@media (max-width: 599px) { @content; }
-}
-@mixin for-tablet-portrait-up {
-	@media (min-width: 600px) { @content; }
-}
-@mixin for-tablet-landscape-up {
-	@media (min-width: 900px) { @content; }
-}
-@mixin for-desktop-up {
-	@media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-	@media (min-width: 1800px) { @content; }
-}
+@import '../../../assets/sass/app-kit/_mixins.scss';
 
 
 .action-bar {
@@ -23,7 +7,6 @@
 	position: absolute;
 	width: 100%;
 	height: 30px;
-	
 }
 .social-links {
 	text-align: right;
@@ -39,13 +22,22 @@
 	}
 }
 .navbar-brand {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
 	img {
 		max-width: 100%;
+	}
+	span {
+		text-transform: initial;
+		margin: 0 2em 0 4em;
+		color: $white-color !important;
 	}
 }
 
 .hidden-xs {
-	display: blck;
+	display: block;
 
 	@include for-phone-only {
 		display: none;
