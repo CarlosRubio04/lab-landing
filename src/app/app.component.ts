@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
@@ -9,23 +9,39 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
+    encapsulation: ViewEncapsulation.None,
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+    modal: boolean = true;
+    closeResult: string;
     private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
-    constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+
+    constructor( private renderer: Renderer,
+        private router: Router,
+        @Inject(DOCUMENT)private document: any,
+        private element: ElementRef,
+        public location: Location) {
+        }
+
+    modalOpen(data) {
+        return this.modal = data;
+    }
+
     ngOnInit() {
-        var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
+
+        const navbar: HTMLElement = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (window.outerWidth > 991) {
                 window.document.children[0].scrollTop = 0;
-            }else{
+            }else {
                 window.document.activeElement.scrollTop = 0;
             }
             this.navbar.sidebarClose();
         });
+
         this.renderer.listenGlobal('window', 'scroll', (event) => {
             const number = window.scrollY;
             if (number > 150 || window.pageYOffset > 150) {
@@ -36,6 +52,7 @@ export class AppComponent implements OnInit {
                 navbar.classList.add('navbar-transparent');
             }
         });
+
         var ua = window.navigator.userAgent;
         var trident = ua.indexOf('Trident/');
         if (trident > 0) {
@@ -47,17 +64,6 @@ export class AppComponent implements OnInit {
             var body = document.getElementsByTagName('body')[0];
             body.classList.add('ie-background');
 
-        }
-
-    }
-    removeFooter() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
-        titlee = titlee.slice( 1 );
-        if(titlee === 'signup' || titlee === 'nucleoicons'){
-            return false;
-        }
-        else {
-            return true;
         }
     }
 }

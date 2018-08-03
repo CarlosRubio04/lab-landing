@@ -1,0 +1,37 @@
+@import '../assets/sass/app-kit/_variables.scss';
+@import '../assets/sass/app-kit/_mixins.scss';
+
+.ligth-box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($dxc-blue, .60);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        max-width: 700px;
+        background-color: $white-color;
+        padding: 2em;
+        border-radius: 10px;
+
+        p {
+            text-align: center;
+            margin-bottom: 16px;
+            display: block;
+            font-weight: 600;
+            color: $dxc-orange;
+            letter-spacing: 2px;
+            font-size: 18px;
+
+            &:nth-last-of-type(1){
+                font-weight: 100;
+                color: $dxc-blue;
+            }
+        }
+    }
+}

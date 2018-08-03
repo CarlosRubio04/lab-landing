@@ -1,3 +1,20 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
-<app-footer *ngIf="removeFooter()"></app-footer>
+<app-footer></app-footer>
+
+
+<div class="ligth-box" *ngIf="modal">
+    <div class="ligth-box-container">
+        <p>
+             Ven a la Semana Demo del Centro de Innovación al Maestro - Laboratorio Vivo y descubre cómo lograr ser un Docente certificado
+             como Diseñador de Experiencias, Diseñador de Entornos y/o Gamificación .
+        </p>
+        <p>
+            Inscríbete a las experiencias demo que tendremos durante esta semana y descubre la magia innovadora para construir soluciones
+            a los problemas de tu escuela.
+        </p>
+        <hr>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaySj6HM0yo40_9pAOCaEc9uFqfg5NNgzD2zPD5Sr1Kz5R5g/viewform" target="_blank" class="btn btn-warning btn-round">Regístrate para asistir</a>
+        <a class="btn btn-warning btn-round" (click)="modalOpen(false)">Cancelar</a>
+    </div>
+</div>
