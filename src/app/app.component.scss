@@ -19,6 +19,15 @@
         padding: 2em;
         border-radius: 10px;
 
+        h4 {
+            text-align: center;
+            margin-bottom: 16px;
+            display: block;
+            font-weight: 800;
+            color: $dxc-blue;
+            letter-spacing: 2px;
+            font-size: 22px;  
+        }
         p {
             text-align: center;
             margin-bottom: 16px;
@@ -29,7 +38,7 @@
             font-size: 18px;
 
             &:nth-last-of-type(1){
-                font-weight: 100;
+                font-weight: 400;
                 color: $dxc-blue;
             }
         }
