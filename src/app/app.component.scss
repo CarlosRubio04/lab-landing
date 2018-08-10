@@ -36,10 +36,12 @@
             color: $dxc-orange;
             letter-spacing: 2px;
             font-size: 18px;
-
-            &:nth-last-of-type(1){
-                font-weight: 400;
+            
+            span {
                 color: $dxc-blue;
+            }
+            a {
+                color: $dxc-blue !important;
             }
         }
     }
