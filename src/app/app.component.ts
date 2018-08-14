@@ -1,10 +1,14 @@
 import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import { DOCUMENT } from '@angular/platform-browser';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+
+import { GoogleAnalyticsEventsService } from './services/ga.service';
+
+declare let ga: any;
 
 @Component({
     selector: 'app-root',
@@ -21,9 +25,20 @@ export class AppComponent implements OnInit {
 
     constructor( private renderer: Renderer,
         private router: Router,
+        private route:ActivatedRoute,
         @Inject(DOCUMENT)private document: any,
         private element: ElementRef,
-        public location: Location) {
+        public googleAnalyticsEventsService: GoogleAnalyticsEventsService) {
+
+            this.router.events.subscribe(event => {
+                if (event instanceof NavigationEnd) {
+                    ga('set', 'page', event.urlAfterRedirects);
+                    ga('send', 'pageview', {
+                        'page': location.pathname + location.search + location.hash,
+                        'location': location.href,
+                    });
+                }
+            });
         }
 
     modalOpen(data) {

@@ -19,6 +19,8 @@ import { ContactoComponent } from './contacto/contacto.component';
 
 import { HomeModule } from './home/home.module';
 
+import { GoogleAnalyticsEventsService } from './services/ga.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,7 @@ import { HomeModule } from './home/home.module';
     CalendarModule.forRoot(),
     //DemoUtilsModule
   ],
-  providers: [],
+  providers: [GoogleAnalyticsEventsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
