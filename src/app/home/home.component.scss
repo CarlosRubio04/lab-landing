@@ -105,6 +105,7 @@
 		background-image: url(../../assets/img/team.jpg);
 		background-repeat: no-repeat;
 		background-position: left center;
+		background-size: 80%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
@@ -125,25 +126,25 @@
 		max-width: 100%;
 
 		&Contaier {
-			background-color: $dxc-orange;
+			background-color: #4DB6C2;
 
 			h4 {
 				text-align: center;
 				color: $dxc-blue;
 				font-weight: 700;
-				font-size: 34px;
+				font-size: 44px;
 				padding-top: 16px;
 			}
 
 			.carousel-content {
 				padding: 2em;
-				height: 300px;
+				height: 200px;
 				display: flex;
 				align-items: center;
 				p {
 					color: $white-color;
 					font-weight: 500;
-					font-size: 16px;
+					font-size: 20px;
 					@include for-phone-only {
 						font-size: 12px;
 					}
@@ -169,8 +170,10 @@
 
 	&Cards {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 280px);
 		grid-template-rows: 1fr;
+		justify-content: center;
+		align-items: center;
 		grid-gap: 12px;
 
 		@include for-phone-only {
@@ -200,12 +203,12 @@
 					
 					h4 {
 						color: $dxc-blue;
-						font-size: 14px;
+						font-size: 18px;
 						font-weight: 400;
 					}
 					p {
 						color: #9B9B9B;
-						font-size: 12px;
+						font-size: 14px;
 					}
 				}
 			}
@@ -225,6 +228,7 @@
 			transform: translateY(20px) !important;
 		}
 		.cardActive {
+			width: 100%;
 			border-radius: 12px;
 			box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
 			background-color: $dxc-red;
