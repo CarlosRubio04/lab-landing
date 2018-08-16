@@ -10,7 +10,7 @@
 		</div>
 		<div class="third">
 			<img src="../assets/img/rectangle-3-blue.svg" alt=":D">
-			<p>para superar los retos de la educación del siglo XXI.</p>
+			<p>para superar los retos de la educación del siglo XXI</p>
 		</div>
 	</div>
 </section>
@@ -26,7 +26,7 @@
 		<div class="AboutContainer">
 			<div class="AboutSlider">
 				<div class="AboutSliderContaier">
-					<h4>¿Qué hacemos?</h4>
+					<h4>¿Quiénes somos?</h4>
 					<ngb-carousel>
 						<ng-template ngbSlide>
 							<div class="carousel-content">
@@ -71,7 +71,9 @@
 						<div class="content">
 							<h4>Diseñador de Experiencias</h4>
 							<p>
-								Si eliges esta ruta serás capaz de generar estrategias y aplicar herramientas de diagnóstico del contexto, permitiéndote situar al estudiante en el centro del diseño de metodologías, pedagogías y ser un mediador efectivo de las diferencias.
+								 Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas de diagnóstico del contexto, que te permitirán
+								situar al estudiante en el centro del diseño de las metodologías y pedagogías, convirtiéndote en un mediador efectivo de
+								las diferencias.
 							</p>
 							<button class="btn btn-outline-warning btn-round" type="button" routerLink="/ruta-uno">Ver más</button>
 						</div>
@@ -86,9 +88,9 @@
 						</div>
 						<div class="content">
 							<h4>Diseñador de Experiencias</h4>
-							<p>
-								Esta ruta es para ti si eres capaz de ponerte en los zapatos del otro.
-							</p>
+							<p>Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas de diagnóstico del contexto, que te permitirán
+							situar al estudiante en el centro del diseño de las metodologías y pedagogías, convirtiéndote en un mediador efectivo de
+							las diferencias.</p>
 							<button class="btn btn-warning btn-round" type="button" (click)="toggleOne()">Ver más</button>
 						</div>
 					</div>
@@ -106,7 +108,8 @@
 						<div class="content">
 							<h4>Diseñador de Entorno</h4>
 							<p>
-								Si eliges esta ruta serás capaz de generar estrategias y aplicar herramientas para aprovechar el contexto y apoyar el diseño de experiencias pertinentes en la escuela.
+								 Si eliges esta ruta, serás capaz de aplicar herramientas prácticas que te permitirán aprovechar el contexto y los recursos
+								disponibles, mejorando tus experiencias de aprendizaje y enseñanza.
 							</p>
 							<button class="btn btn-outline-warning btn-round" type="button" routerLink="/ruta-dos">Ver más</button>
 						</div>
@@ -121,10 +124,8 @@
 						<div class="content">
 							<h4>Diseñador de Entorno</h4>
 							<p>
-								Esta ruta es para ti si
-								eres inquieto y te
-								gusta emprender
-								proyectos.
+								 Si eliges esta ruta, serás capaz de aplicar herramientas prácticas que te permitirán aprovechar el contexto y los recursos
+								disponibles, mejorando tus experiencias de aprendizaje y enseñanza.
 							</p>
 							<button class="btn btn-warning btn-round" type="button" (click)="toggleSecond()">Ver más</button>
 						</div>
@@ -143,7 +144,8 @@
 						<div class="content">
 							<h4>Gamificador</h4>
 							<p>
-								Si eliges esta ruta serás capaz de generar estrategias y aplicar herramientas que permitan medir la efectividad de tus innovaciones en términos de logro y motivación en los estudiantes.
+								Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas, que te permitirán medir la efectividad de
+								tus innovaciones en términos de logro y motivación en los estudiantes.
 							</p>
 							<button class="btn btn-outline-warning btn-round" type="button" routerLink="/ruta-tres">Ver más</button>
 						</div>
@@ -158,9 +160,8 @@
 						<div class="content">
 							<h4>Gamificador</h4>
 							<p>
-								Esta ruta es para ti si
-								tienes espíritu
-								científico
+								 Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas, que te permitirán medir la efectividad de
+								tus innovaciones en términos de logro y motivación en los estudiantes.
 							</p>
 							<button class="btn btn-warning btn-round" type="button" (click)="toggleThird()">Ver más</button>
 						</div>
@@ -168,52 +169,12 @@
 				</div>
 
 			</div>
-
-			<!-- <div class="item">
-
-				<div class="card">
-					<div class="cardContainer">
-						<div class="picture">
-							<img src="../assets/img/gamificator.svg" alt="Design">
-						</div>
-						<div class="content">
-							<h4>Directivos Docentes</h4>
-							<p>
-								Con esta ruta generarás estrategias y aplicarás herramientas para liderar el cambio y desarrollar las capacidades de tu equipo. 
-							</p>
-							<button class="btn btn-outline-warning btn-round" type="button" routerLink="/ruta-cuatro">Ver más</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="cardActive" [ngClass]="{'active': visbleFour }">
-					<div class="cardContainer">
-						<div class="picture">
-							<img src="../assets/img/gamificator.svg" alt="Design">
-						</div>
-						<div class="content">
-							<h4>Directivos Docentes</h4>
-							<p>
-								Esta ruta es para ti si te
-								apasiona la innovación
-								educativa y quieres
-								liderar el cambio en tú
-								institución.
-							</p>
-							<button class="btn btn-warning btn-round" type="button" (click)="toggleFourth()">Ver más</button>
-						</div>
-					</div>
-				</div>
-
-			</div> -->
-
 		</div>
 		
 		<div class="routesLine">
 			<app-route-one [@OneLine]='showFirst'></app-route-one>
 			<app-route-tow [@OneLine]='showSecond'></app-route-tow>
 			<app-route-three [@OneLine]='showThird'></app-route-three>
-			<!-- <app-route-four [@OneLine]='showFourth'></app-route-four> -->
 		</div>
 		
 
@@ -222,7 +183,7 @@
 
 <section class="cta">
 	<div class="button">
-		<a href="https://docs.google.com/forms/d/e/1FAIpQLSewHcYNmrCnFH8CFxbWWopG_Q3gf0V6gmZ2qVN-VHz1Bq9QGA/viewform" target="_blank" target="_blank">
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSewHcYNmrCnFH8CFxbWWopG_Q3gf0V6gmZ2qVN-VHz1Bq9QGA/viewform"  target="_blank">
 			<img src="../assets/img/btn.svg" alt="CTA">
 		</a>
 	</div>
@@ -230,11 +191,6 @@
 
 <section class="calendar">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="text-center">CALENDARIO 2018</h2>
-			</div>
-		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<mwl-demo-component></mwl-demo-component>
