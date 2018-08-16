@@ -2,9 +2,11 @@
 @import '../../../assets/sass/app-kit/_mixins.scss';
 
 .footer {
-	background-image: url(../../../assets/img/map-footer.png);
+	background-image: url(../../../assets/img/footer.jpg);
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center top;
+	background-color: #4DB6C2;
+	background-blend-mode: soft-light;
 	padding: 20px 0;
 	transition: all 1s ease-in-out;
 	h4 {
@@ -14,6 +16,11 @@
 	}
 	&-contact {
 		color: $white-color;
+
+		h5 {
+			margin: 0;
+			color: $dxc-blue;
+		}
 	}
 
 	&-social {
@@ -24,6 +31,28 @@
 			a {
 				color: $white-color;
 				margin-right: 10px;
+			}
+		}
+	}
+
+	&-logos {
+		display: flex;
+		justify-content: space-between;
+		width: 1200px;
+		margin: 0 auto;
+		max-width: 100%;
+		background-color: $white-color;
+		padding: 10px 30px;
+		.item	{
+			width: 100%;
+			display: flex;
+			img {
+				max-height: 70px;
+				width: auto;
+				display: block;
+			}
+			&:last-child {
+				justify-content: flex-end;
 			}
 		}
 	}
