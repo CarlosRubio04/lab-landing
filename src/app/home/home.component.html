@@ -91,7 +91,7 @@
 							<p>Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas de diagnóstico del contexto, que te permitirán
 							situar al estudiante en el centro del diseño de las metodologías y pedagogías, convirtiéndote en un mediador efectivo de
 							las diferencias.</p>
-							<button class="btn btn-warning btn-round" type="button" (click)="toggleOne()">Ver más</button>
+							<button class="btn btn-warning btn-round" type="button" (click)="toggleOne(routesLine)">Ver más</button>
 						</div>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 								 Si eliges esta ruta, serás capaz de aplicar herramientas prácticas que te permitirán aprovechar el contexto y los recursos
 								disponibles, mejorando tus experiencias de aprendizaje y enseñanza.
 							</p>
-							<button class="btn btn-warning btn-round" type="button" (click)="toggleSecond()">Ver más</button>
+							<button class="btn btn-warning btn-round" type="button" (click)="toggleSecond(routesLine)">Ver más</button>
 						</div>
 					</div>
 				</div>
@@ -163,7 +163,7 @@
 								 Si eliges esta ruta, serás capaz de generar estrategias y aplicar herramientas, que te permitirán medir la efectividad de
 								tus innovaciones en términos de logro y motivación en los estudiantes.
 							</p>
-							<button class="btn btn-warning btn-round" type="button" (click)="toggleThird()">Ver más</button>
+							<button class="btn btn-warning btn-round" type="button" (click)="toggleThird(routesLine)">Ver más</button>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@
 			</div>
 		</div>
 		
-		<div class="routesLine">
+		<div class="routesLine" #routesLine>
 			<app-route-one [@OneLine]='showFirst'></app-route-one>
 			<app-route-tow [@OneLine]='showSecond'></app-route-tow>
 			<app-route-three [@OneLine]='showThird'></app-route-three>

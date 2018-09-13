@@ -119,7 +119,6 @@
 		margin-top: 30px;
 		font-size: 24px;
 		font-weight: 600;
-		font-style: italic;
 		@include for-phone-only {
 			display: none;
 		}
@@ -167,7 +166,7 @@
 
 	h2 {
 		color: $dxc-blue;
-		font-weight: 800;
+		font-weight: 200;
 		margin-bottom: 60px;
 	}
 
@@ -187,31 +186,33 @@
 			position: relative;
 		}
 		.card {
-
 			&Container {
 				padding: 28px 18px;
 
 				.picture {
+					text-align: center;
 					margin-bottom: 8px;
 					img {
-						height: 80px;
+						height: 110px;
 					}
 				}
 				.content {
 					display: flex;
 					flex-direction: column;
-					justify-content: space-between;
+					justify-content: space-around;
 					align-items: flex-start;
 					min-height: 250px;
 					
 					h4 {
 						color: $dxc-blue;
-						font-size: 18px;
+						font-size: 22px;
 						font-weight: 400;
 					}
 					p {
 						color: #9B9B9B;
-						font-size: 14px;
+						font-size: 12px;
+						text-align: justify;
+						font-family: 'Roboto', sans-serif;
 					}
 				}
 			}
@@ -250,12 +251,13 @@
 			.content {
 				h4 {
 					color: $white-color;
-					font-size: 20px;
+					font-size: 22px;
 					font-weight: 600;
 				}
 				p {
 					color: $white-color;
-					font-size: 16px;
+					font-size: 14px;
+					font-family: 'Roboto', sans-serif;
 				}
 
 				.btn {

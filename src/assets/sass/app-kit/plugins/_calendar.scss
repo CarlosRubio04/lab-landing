@@ -5,6 +5,7 @@
 	color: $white-color;
 	font-size: 12px;
 	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
 
 	&:hover {
 		color: $white-color;
@@ -34,24 +35,29 @@
 
 .modal-footer {
 	padding: 1em;
+	font-family: 'Roboto', sans-serif;
 }
 .modal-header {
 	background-color: $dxc-orange;
+	font-family: 'Roboto', sans-serif;
 }
 .modal-title {
 	color: $white-color !important;
 	text-align: left !important;
 	font-weight: 700;
+	font-family: 'Roboto', sans-serif;
 }
 .modal-body {
 	padding: 16px !important;
 	p {
 		color: $dxc-blue;
-		font-weight: 100;
+		font-weight: 300;
+		font-family: 'Roboto', sans-serif;
 	}
 	b {
 		color: $dxc-red;
 		font-weight: 600;
 		font-size: 13px;
+		font-family: 'Roboto', sans-serif;
 	}
 }

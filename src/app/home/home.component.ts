@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
     get showFourth(){
         return this.showFour ? 'show' : 'hide'
     }
-    toggleOne() {
+    toggleOne($element) {
         this.showTow = false;
         this.visbleTow = false;
         this.showThree = false;
@@ -74,9 +74,10 @@ export class HomeComponent implements OnInit {
 
         this.showOne = true;
         this.visbleOne = true;
+        $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
 
-    toggleSecond() {
+    toggleSecond($element) {
         this.showOne = false;
         this.visbleOne = false;
         this.showThree = false;
@@ -86,10 +87,10 @@ export class HomeComponent implements OnInit {
 
         this.showTow = true;
         this.visbleTow = true;
-        
+        $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
 
-    toggleThird() {
+    toggleThird($element) {
         this.showOne = false;
         this.showTow = false;
         this.visbleOne = false;
@@ -99,7 +100,7 @@ export class HomeComponent implements OnInit {
 
         this.showThree = true;
         this.visbleThree = true;
-        
+        $element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
     toggleFourth() {
         this.showOne = false;
