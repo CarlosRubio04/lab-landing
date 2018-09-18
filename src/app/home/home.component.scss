@@ -3,7 +3,8 @@
 
 .Hero {
 	min-height: 600px;
-	background-image: url(../../assets/img/hero-back.jpg);
+	max-height: 600px;
+	overflow: hidden;
 	background-size: cover;
 	background-position: center top;
 	display: flex;
@@ -13,7 +14,34 @@
 	@include for-phone-only {
 		min-height: 400px;
 	}
+	&-slider {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		max-width: 100%;
 
+		.img-slide {
+			width: 100%;
+			max-width: 100%;
+			max-height: 700px;
+			object-fit: cover;
+			object-position: center;
+			@include for-phone-only {
+				min-height: 400px;
+			}
+		}
+	}
+	&Layout {
+		width: 100%;
+		height: 700px;
+		position: absolute;
+		top: 0;
+		background-color: rgba($dxc-blue, .5);
+
+		@include for-phone-only {
+			height: 400px;
+		}
+	}
 	&Container {
 		top: 120px;
 		position: relative;
@@ -126,30 +154,25 @@
 	&Slider {
 		width: 660px;
 		max-width: 100%;
-
+		
 		&Contaier {
 			background-color: #4DB6C2;
+			padding: 1em 2em;
 
 			h4 {
 				text-align: center;
 				color: $dxc-blue;
 				font-weight: 700;
 				font-size: 44px;
-				padding-top: 16px;
+				margin-bottom: 1em;
 			}
 
-			.carousel-content {
-				padding: 2em;
-				height: 200px;
-				display: flex;
-				align-items: center;
-				p {
-					color: $white-color;
-					font-weight: 500;
-					font-size: 20px;
-					@include for-phone-only {
-						font-size: 12px;
-					}
+			p {
+				color: $white-color;
+				font-weight: 500;
+				font-size: 20px;
+				@include for-phone-only {
+					font-size: 12px;
 				}
 			}
 		}
