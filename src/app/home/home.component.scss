@@ -342,3 +342,16 @@
 		cursor: pointer;
 	}
 }
+
+
+.share {
+	margin-top: 140px;
+
+	h2 {
+		color: $dxc-blue;
+		margin-bottom: 16px;
+		small {
+			color: $dxc-orange;
+		}
+	}
+}
